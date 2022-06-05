@@ -17,14 +17,16 @@
         android:id="@+id/tilFirstname"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:passwordToggleEnabled="false"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etFistname"
@@ -45,14 +47,16 @@
         android:id="@+id/tilSecondname"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3">
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:passwordToggleEnabled="false"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -72,14 +76,15 @@
         android:id="@+id/tilEmail"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline7">
+        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
@@ -100,14 +105,16 @@
         android:id="@+id/tilEnterPassword"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline8">
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEnterPassword"
@@ -128,14 +135,16 @@
         android:id="@+id/tilConfirmPassword"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline9">
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etConfirmPassword"
@@ -151,6 +160,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
         android:layout_marginEnd="112dp"
+        android:backgroundTint="#FF9800"
         android:text="Sign Up"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         app:layout_constraintEnd_toEndOf="parent"
@@ -182,5 +192,65 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.95"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tilFirstname"
+        app:layout_constraintEnd_toStartOf="@+id/tilFirstname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tilFirstname"
+        app:srcCompat="@drawable/ic_round_supervised_user_circle_24" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tilSecondname"
+        app:layout_constraintEnd_toStartOf="@+id/tilSecondname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tilSecondname"
+        app:srcCompat="@drawable/ic_round_supervised_user_circle_24" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tilEmail"
+        app:layout_constraintEnd_toStartOf="@+id/tilEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tilEmail"
+        app:srcCompat="@drawable/ic_baseline_email_24" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tilEnterPassword"
+        app:layout_constraintEnd_toStartOf="@+id/tilEnterPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tilEnterPassword"
+        app:srcCompat="@drawable/ic_baseline_lock_24" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tilConfirmPassword"
+        app:layout_constraintEnd_toStartOf="@+id/tilConfirmPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tilConfirmPassword"
+        app:srcCompat="@drawable/ic_baseline_lock_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
