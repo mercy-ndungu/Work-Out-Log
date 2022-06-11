@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">WorkoutLog</string>
+    <string name="track">track</string>
+    <string name="plan">plan</string>
+    <string name="profile">profile</string>
 </resources>
