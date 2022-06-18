@@ -8,7 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputLayout
-
+    
 class LoginActivity : AppCompatActivity() {
     lateinit var tilEmail: TextInputLayout
     lateinit var etEmail: EditText
