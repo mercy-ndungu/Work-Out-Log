@@ -7,13 +7,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputLayout
+import com.kirigo.workoutlog.databinding.ActivityLoginBinding
+import com.kirigo.workoutlog.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
-    lateinit var etEnterPassword: EditText
-    lateinit var etConfirmPassword: EditText
-    lateinit var btnSignUp: Button
-    lateinit var tvLogin2: TextView
-    lateinit var tilConfirmPassword: TextInputLayout
+    lateinit var binding:ActivitySignUpBinding
 
 
 //    tvLogin2.setOnClickListener {
@@ -22,31 +20,27 @@ class SignUpActivity : AppCompatActivity() {
 //    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
-    btnSignUp = findViewById(R.id.btnSignUp)
-    etConfirmPassword = findViewById(R.id.etConfirmPassword)
-    tvLogin2 = findViewById(R.id.tvLogin2)
-    etEnterPassword = findViewById(R.id.etEnterPassword)
-    tilConfirmPassword = findViewById(R.id.tilConfirmPassword)
+    binding = ActivitySignUpBinding.inflate(layoutInflater)
+    setContentView(binding.root)
 
 
-    tvLogin2.setOnClickListener {
+    binding.tvLogin2.setOnClickListener {
        val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
    }
-    btnSignUp.setOnClickListener {
+    binding.btnSignUp.setOnClickListener {
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
     }
-    btnSignUp.setOnClickListener {
+    binding.btnSignUp.setOnClickListener {
         validity()
     }
     }
     fun validity(){
-        var password1 = etEnterPassword.text.toString()
-        var password2 = etConfirmPassword.text.toString()
+        var password1 = binding.etEnterPassword.text.toString()
+        var password2 = binding.etConfirmPassword.text.toString()
         if(password1!=password2){
-            tilConfirmPassword.error = "Password does not match!"
+            binding.tilConfirmPassword.error = "Password does not match!"
         }
 
 //        fun validation(){
