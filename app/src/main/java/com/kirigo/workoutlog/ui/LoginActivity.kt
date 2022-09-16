@@ -1,13 +1,8 @@
-package com.kirigo.workoutlog
+package com.kirigo.workoutlog.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import com.google.android.material.textfield.TextInputLayout
 import com.kirigo.workoutlog.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -34,6 +29,10 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+//    fun makeLoginRequest(loginRequest: LoginRequest){
+//        var
+//    }
+//    override fun onFailure()
     fun validation(){
         var email = binding.etEmail.text.toString()
         var password = binding.etPassword.text.toString()
@@ -49,5 +48,14 @@ class LoginActivity : AppCompatActivity() {
         if(!error){
             startActivity(Intent(this, HomeActivity::class.java))
         }
+
+
     }
-}
+//    fun makeRegistrationRequest(registerRequest: RegisterRequest){
+//        var apiClient= ApiClient.buildApiClient(ApiInterface::class.java)
+//        var request = apiClient.registerUser(registerRequest)
+//        request.enqueue(object : Callback<RegisterResponse>){
+//
+//        })
+    }
+

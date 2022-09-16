@@ -1,12 +1,9 @@
-package com.kirigo.workoutlog
+package com.kirigo.workoutlog.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentContainerView
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.kirigo.workoutlog.R
 import com.kirigo.workoutlog.databinding.ActivityHome2Binding
-import com.kirigo.workoutlog.databinding.ActivityHomeBinding
-import com.kirigo.workoutlog.databinding.ActivitySignUpBinding
 
 class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityHome2Binding
